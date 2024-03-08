@@ -1,4 +1,4 @@
-name: Grafana Deploy 
+name: Vault Deploy 
 
 on:
   push:
@@ -12,7 +12,6 @@ jobs:
   grafana:
     runs-on: ubuntu-latest
 
-      # Replace with your desired Terraform version something
 
     steps:
     - name: Checkout Repository
@@ -33,7 +32,7 @@ jobs:
 
       
     - name: Kubectl create ns 
-      run:  kubectl create ns grafana 
+      run:  kubectl create ns vault 
 
 
     - name: Install Helm
