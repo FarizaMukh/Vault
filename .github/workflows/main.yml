@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  grafana:
+  vault:
     runs-on: ubuntu-latest
 
 
@@ -42,7 +42,7 @@ jobs:
         ./get_helm.sh
 
     - name: Deploy Helm Chart
-      run: |
-        helm repo add grafana https://grafana.github.io/helm-charts
-        helm install my-grafana grafana/grafana --version 7.3.3 --namespace grafana
+      run: 
+      helm repo add hashicorp https://helm.releases.hashicorp.com
+      helm install my-vault hashicorp/vault --version 0.27.0
 
