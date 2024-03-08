@@ -42,7 +42,7 @@ jobs:
         ./get_helm.sh
 
     - name: Deploy Helm Chart
-      run: 
+      run: |
       helm repo add hashicorp https://helm.releases.hashicorp.com
       helm install my-vault hashicorp/vault --version 0.27.0
 
